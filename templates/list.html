@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html  >
+    {% load static %}
+<head>
+  <!-- Site made with Mobirise Website Builder v5.2.0, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{% static 'assets/images/logo-64x64.png' %}" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>liste</title>
+  <link rel="stylesheet" href="{% static 'assets/tether/tether.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/socicon/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
+  <link rel="preload" as="style" href="{% static 'assets/mobirise/css/mbr-additional.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section class="menu cid-s48OLK6784" once="menu" id="menu1-v">
+    
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="https://meropro.com">
+                        <img src="{% static 'assets/images/logo-64x64.png' %}" alt="Mero Pro" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="https://meropro.com">Mero Pro</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black display-4" href="#">
+                    {{user}}</a></li></ul>
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-danger display-4" href="{% url 'logout' %}"">
+                        Logout</a></div>
+            </div>
+        </div>
+    </nav>
+
+</section>
+
+<section class="content12 cid-sdINPYCO8h" id="content12-x">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="mbr-section-btn align-center">
+                    <a class="btn btn-warning display-4" href="{% url 'connexion' %}">Connexion</a>
+                    <a class="btn btn-dark display-4" href="{% url 'tutoajout' %}">Ajouter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features8 cid-sdITdhiGRb" xmlns="http://www.w3.org/1999/html" id="features9-y">
+    
+    
+
+    
+
+    <div class="container">
+        {% for tuto in tutos%}
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="card-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md">
+                        <div class="card-box">
+                            <div class="row">
+                                <div class="col-md">
+                                    <h6 class="card-title mbr-fonts-style display-5 ">
+                                        <strong><a href="https://{{tuto.client_url}}">{{tuto.client_url}}</a></strong>
+                                    </h6>
+                                    <p class="mbr-text mbr-fonts-style display-7">
+                                        {{tuto.cle_tuto}} -- {{tuto.clientName}} - {{tuto.idTutoVideo}}
+                                    </p>
+                                </div>
+                                <div class="col-md-auto">
+                                    <p class=" mbr-section-btn"><a href="{% url 'tuto' tuto.cle_tuto %}" class="btn btn-success display-4">
+                                        Voir
+                                    </a></p>
+                                    <div class="mbr-section-btn">
+                                        <a href="{% url 'updatedeletetuto' tuto.cle_tuto %}" class="btn btn-primary display-4">
+                                            Modifier
+                                        </a>
+                                    </div>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="footer3 cid-s48P1Icc8J" once="footers" id="footer3-w">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                    
+                    
+                    
+                    
+                    
+                    
+                <div class="soc-item">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                    </div></div>
+            </div>
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                    © <a href="https://meropro.com" class="text-primary" target="_blank">Mero Pro</a> - Tous droits réservés
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+
+<script src="{% static 'assets/web/assets/jquery/jquery.min.js' %}"></script>  
+<script src="{% static 'assets/popper/popper.min.js' %}"></script>  
+ 
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>   
+
+</body>
+</html>
