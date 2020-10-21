@@ -132,7 +132,7 @@ def connexion(request):
         try:
             tuto = Tuto.objects.get(pk=cle_tuto)
         except:
-            return redirect("/connexion")
+            return redirect("/")
         return redirect("/tuto/"+cle_tuto)
     return render(request, "connexion.html")
 
@@ -140,5 +140,5 @@ def tutoPage(request, idTuto):
     try:
         tuto = Tuto.objects.get(pk=idTuto)
     except:
-        return redirect("/connexion")
+        return redirect("/")
     return render(request,"tuto.html",{"tuto":tuto})
