@@ -6,8 +6,6 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-def error_404_view(request, exception):
-    return render(request,'404.html')
 
 @login_required(login_url="/login/")
 def listTutos(request):
