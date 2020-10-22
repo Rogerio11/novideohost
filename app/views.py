@@ -7,6 +7,9 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
+
+
+
 @login_required(login_url="/login/")
 def listTutos(request):
     user = request.user
@@ -142,3 +145,9 @@ def tutoPage(request, idTuto):
     except:
         return redirect("/")
     return render(request,"tuto.html",{"tuto":tuto})
+
+def pour1404(request, param1):
+    return render(request, "pour404.html")
+
+def pour2404(request, param1, param2):
+    return render(request, "pour404.html")
