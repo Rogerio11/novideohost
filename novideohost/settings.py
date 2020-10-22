@@ -25,7 +25,7 @@ SECRET_KEY = 'h85kql$#t*s4rm#5__2+e-pb1ij%m1gey91e2g!swmw9mz^@^*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['novideohost.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['novideohost.herokuapp.com']
 
 
 # Application definition
