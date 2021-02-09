@@ -146,8 +146,5 @@ def tutoPage(request, idTuto):
         return redirect("/")
     return render(request,"tuto.html",{"tuto":tuto})
 
-def pour1404(request, param1):
-    return render(request, "pour404.html")
-
-def pour2404(request, param1, param2):
+def error_404(request, exception):
     return render(request, "pour404.html")
